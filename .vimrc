@@ -13,6 +13,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
 Plugin 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
@@ -20,6 +21,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'stephenmckinney/vim-solarized-powerline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -98,12 +100,14 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
+" Allow mouse interaction
+set mouse=a
+
 " Set custom error handling
 set noerrorbells
 set visualbell
 set t_vb=
 set tm=500
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -113,6 +117,9 @@ syntax enable
 
 colorscheme solarized
 set background=dark
+
+" Powerline settings
+let g:Powerline_colorscheme='solarized256_dark'
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -400,8 +407,15 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugin Mapings
+" => Plugin Customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" GitGutter
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=green guifg=darkgreen
+highlight GitGutterChange ctermfg=yellow guifg=darkyellow
+highlight GitGutterDelete ctermfg=red guifg=darkred
+highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
+
 " NERDTree
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
