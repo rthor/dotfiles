@@ -16,12 +16,19 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/syntastic'
+Plugin 'chriskempson/base16-vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'stephenmckinney/vim-solarized-powerline'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+Bundle "pangloss/vim-javascript"
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -111,11 +118,8 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme solarized
 set background=dark
-
-" Powerline settings
-let g:Powerline_colorscheme='solarized256_dark'
+colorscheme base16-tomorrow
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -220,20 +224,6 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 
-""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""
-" Always show the status line
-" set laststatus=2
-
-" Format the status line
- "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
-set guifont=Inconsolata\ for\ Powerline:h15
-let g:Powerline_symbols = 'fancy'
-set t_Co=256
-set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
-set termencoding=utf-8
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
@@ -390,24 +380,24 @@ function! <SID>BufcloseCloseIt()
 endfunction
 
 " Autocompletion
-function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-    return "\<tab>"
-  else
-    return "\<c-p>"
-  endif
-endfunction
+" function! InsertTabWrapper()
+"   let col = col('.') - 1
+"   if !col || getline('.')[col - 1] !~ '\k'
+"     return "\<tab>"
+"   else
+"     return "\<c-p>"
+"   endif
+" endfunction
 
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
+" inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+" inoremap <s-tab> <c-n>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin Customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GitGutter
 highlight clear SignColumn
-highlight GitGutterAdd ctermfg=green guifg=darkgreen
+highlight GitGutterAdd ctermfg=green guifg=green
 highlight GitGutterChange ctermfg=yellow guifg=darkyellow
 highlight GitGutterDelete ctermfg=red guifg=darkred
 highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
