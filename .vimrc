@@ -417,13 +417,6 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin Customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" GitGutter
-highlight clear SignColumn
-highlight GitGutterAdd ctermfg=green guifg=green
-highlight GitGutterChange ctermfg=yellow guifg=darkyellow
-highlight GitGutterDelete ctermfg=red guifg=darkred
-highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
-
 " NERDTree
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
