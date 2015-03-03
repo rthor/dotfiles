@@ -29,7 +29,10 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "pangloss/vim-javascript"
+Bundle 'slim-template/vim-slim.git'
 Bundle 'kien/ctrlp.vim'
+Bundle 'groenewege/vim-less'
+Bundle 'digitaltoad/vim-jade'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
