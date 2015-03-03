@@ -48,6 +48,8 @@ set autoread
 let mapleader = ","
 let g:mapleader = ","
 
+set timeout ttimeoutlen=5000
+
 " Save file
 nmap <leader>w :w!<cr>
 
@@ -119,7 +121,8 @@ set tm=500
 syntax enable
 
 set background=dark
-colorscheme base16-tomorrow
+let base16colorspace=256 
+colorscheme base16-pop
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
