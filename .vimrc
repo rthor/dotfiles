@@ -401,6 +401,13 @@ endfunction
 " inoremap <s-tab> <c-n>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Sage Development
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup filetypedetect
+  au! BufRead,BufNewFile *.sage,*.spyx,*.pyx setfiletype python
+augroup END
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin Customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GitGutter
