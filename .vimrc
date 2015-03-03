@@ -168,6 +168,9 @@ set number
 set cursorline
 highlight  CursorLine ctermbg=232 ctermfg=None 
 
+" Use system clipboard for yank/put
+set clipboard=unnamed
+
 " Show status bar...always
 set laststatus=2
 
