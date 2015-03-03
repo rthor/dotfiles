@@ -29,6 +29,7 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 Bundle "pangloss/vim-javascript"
+Bundle 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -421,3 +422,7 @@ highlight GitGutterChangeDelete ctermfg=yellow guifg=darkyellow
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>
+
+" CtrlP
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = 'node_modules'
