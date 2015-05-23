@@ -15,10 +15,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/syntastic'
 Plugin 'chriskempson/base16-vim'
-Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
@@ -420,11 +418,6 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin Customization
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark 
-map <leader>nf :NERDTreeFind<cr>
-
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = 'node_modules'
