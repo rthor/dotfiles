@@ -31,6 +31,7 @@ Bundle 'slim-template/vim-slim.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
+Plugin 'trusktr/seti.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -122,10 +123,6 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-set background=dark
-let base16colorspace=256 
-colorscheme base16-pop
-
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -156,7 +153,6 @@ set tabstop=2
 " Linebreak on 500 characters
 set lbr
 set tw=120
-let &colorcolumn="120"
 
 set ai "Auto indent
 set si "Smart indent
@@ -167,7 +163,6 @@ set number
 
 " Enable cursor line
 set cursorline
-highlight  CursorLine ctermbg=232 ctermfg=None 
 
 " Use system clipboard for yank/put
 set clipboard=unnamed
