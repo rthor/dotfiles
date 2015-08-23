@@ -13,25 +13,29 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'chriskempson/base16-vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'marijnh/tern_for_vim'
 Bundle 'tpope/vim-surround'
+Bundle 'Townk/vim-autoclose'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'stephenmckinney/vim-solarized-powerline'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
-Bundle "pangloss/vim-javascript"
+Bundle 'pangloss/vim-javascript'
 Bundle 'slim-template/vim-slim.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'groenewege/vim-less'
 Bundle 'digitaltoad/vim-jade'
-Plugin 'trusktr/seti.vim'
+Plugin 'vim-scripts/Nazca'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'chriskempson/base16-vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -123,6 +127,10 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
+set t_Co=256
+color nazca
+set background=dark
+
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
@@ -162,7 +170,7 @@ set wrap "Wrap lines
 set number
 
 " Enable cursor line
-set cursorline
+" set cursorline
 
 " Use system clipboard for yank/put
 set clipboard=unnamed
@@ -416,3 +424,8 @@ augroup END
 " CtrlP
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = 'node_modules'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors scheme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'jelera/vim-javascript-syntax'
